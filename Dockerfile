@@ -5,7 +5,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 # Если проект крашнется, выведется сообщение из-за какой ошибки это произошло
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /root/git_commands/
+#WORKDIR /root/git_commands/
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
