@@ -22,7 +22,7 @@ CSRF_TRUSTED_ORIGINS = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3030',
-    'http://85.192.41.43',
+    'http://85.192.41.43/',
 ]
 
 
