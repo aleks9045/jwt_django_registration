@@ -1,7 +1,7 @@
 # Регистрация с помощью jwt токена
 Сайт доступен по адресу
 # 85.192.41.43
-Все пути:</br>
+# Все пути:</br>
 admin/ </br>
 auth/ ^users/$ [name='user-list']</br>
 auth/ ^users\.(?P<format>[a-z0-9]+)/?$ [name='user-list']</br>
@@ -32,4 +32,20 @@ auth/ ^jwt/refresh/? [name='jwt-refresh']</br>
 auth/ ^jwt/verify/? [name='jwt-verify']</br>
 ^static/(?P<path>.*)$</br>
 ^media/(?P<path>.*)$</br>
+</br>
+
+# Разрешения
+'activation': AllowAny</br>
+'password_reset': AllowAny</br>
+'password_reset_confirm': AllowAny</br>
+'set_password': CurrentUserOrAdmin</br>
+'username_reset': AllowAny</br>
+'username_reset_confirm': AllowAny</br>
+'set_username': CurrentUserOrAdmin</br>
+'user_create': AllowAny</br>
+'user_delete': CurrentUserOrAdmin</br>
+'user': CurrentUserOrAdmin</br>
+'user_list': CurrentUserOrAdmin</br>
+'token_create': AllowAny</br>
+'token_destroy': IsAuthenticated</br>
 </br>
