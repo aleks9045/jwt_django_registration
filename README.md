@@ -7,13 +7,13 @@ auth/ ^users/$</br>
 auth/ ^users\.(?P<format>[a-z0-9]+)/?$ </br>
 auth/ ^users/activation/$</br>
 auth/ ^users/activation\.(?P<format>[a-z0-9]+)/?$</br>
-auth/ ^users/me/$ [name='user-me']</br>
+auth/ ^users/me/$</br>
 auth/ ^users/me\.(?P<format>[a-z0-9]+)/?$</br>
 auth/ ^users/resend_activation/$</br>
 auth/ ^users/resend_activation\.(?P<format>[a-z0-9]+)/?$/br>
-auth/ ^users/reset_password/$ [name='user-reset-password']</br>
+auth/ ^users/reset_password/$</br>
 auth/ ^users/reset_password\.(?P<format>[a-z0-9]+)/?$</br>
-auth/ ^users/reset_password_confirm/$ [name='user-reset-password-confirm']</br>
+auth/ ^users/reset_password_confirm/$ ==</br>
 auth/ ^users/reset_password_confirm\.(?P<format>[a-z0-9]+)/?$</br>
 auth/ ^users/reset_username/$</br>
 auth/ ^users/reset_username\.(?P<format>[a-z0-9]+)/?$</br>
