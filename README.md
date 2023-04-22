@@ -13,7 +13,7 @@ auth/ ^users/resend_activation/$</br>
 auth/ ^users/resend_activation\.(?P<format>[a-z0-9]+)/?$/br>
 auth/ ^users/reset_password/$</br>
 auth/ ^users/reset_password\.(?P<format>[a-z0-9]+)/?$</br>
-auth/ ^users/reset_password_confirm/$ ==</br>
+auth/ ^users/reset_password_confirm/$</br>
 auth/ ^users/reset_password_confirm\.(?P<format>[a-z0-9]+)/?$</br>
 auth/ ^users/reset_username/$</br>
 auth/ ^users/reset_username\.(?P<format>[a-z0-9]+)/?$</br>
