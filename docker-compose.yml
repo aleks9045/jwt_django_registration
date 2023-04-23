@@ -20,7 +20,14 @@ services:
                         - static_volume:/app/staticfiles
                         - media_volume:/app/media
                 ports:
-                  - "80:80"
+                        - "80:80"
+        sqlite:
+                image: nouchka/sqlite3:latest
+                container_name: db_container
+                stdin_open: true
+                tty: true
+                volumes:
+                      - ./db:/root/db/
 volumes:
   media_volume:
   static_volume:
