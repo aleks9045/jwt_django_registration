@@ -5,9 +5,11 @@ services:
                 build: .
                 ports:
                 - "8000:8000"
+                depends_on:
+                        - sqlite3
                 volumes:
                 - static_volume:/app/staticfiles
-                - media_volume:/app/mediafiles
+                - media_volume:/app/media
                 command: >
                           sh -c "python manage.py collectstatic --noinput && 
                           gunicorn --bind 0.0.0.0:8000 djangoProject.wsgi:application"
@@ -30,6 +32,8 @@ services:
                 tty: true
                 volumes:
                       - ./db:/root/db/
+                environment:
+                      - SQLITE3_DB=db.sqlite3
 volumes:
   media_volume:
   static_volume:
