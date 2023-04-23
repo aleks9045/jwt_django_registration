@@ -16,14 +16,12 @@ ALLOWED_HOSTS = os.getenv("HOSTS").split()
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
-    'http://85.192.41.43',
-    'http://localhost:5173/'
+    'http://85.192.41.43'
 ]
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3030',
-    'http://85.192.41.43',
-    'http://localhost:5173/',
+    'http://85.192.41.43'
 ]
 
 
@@ -158,4 +156,3 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
-
