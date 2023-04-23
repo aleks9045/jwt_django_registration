@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+        web:
+                container_name: djando_container
+                build: .
+                ports:
+                - "8000:8000"
+                volumes:
+                - static_volume:/app/staticfiles
+                - media_volume:/app/mediafiles
+                command: >
+                          bash -c "python manage.py collectstatic --noinput && File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_processpython manage.py migrate && 
+                          gunicorn git_commands.wsgi:application --bind 0.0.0.0:8000"
+        nginx:
+                build: ./nginx
+                container_name: nginx
+                links:
+                        - web
+                depends_on:
+                        - web
+                volumes:
+                        - static_volume:/app/staticfiles
+                        - media_volume:/app/media
+                ports:
+                        - "80:80"
+volumes:
+  media_volume:
+  static_volume:
