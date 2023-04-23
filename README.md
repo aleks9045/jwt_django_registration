@@ -10,7 +10,7 @@ auth/ ^users/activation\.(?P<format>[a-z0-9]+)/?$</br>
 auth/ ^users/me/$</br>
 auth/ ^users/me\.(?P<format>[a-z0-9]+)/?$</br>
 auth/ ^users/resend_activation/$</br>
-auth/ ^users/resend_activation\.(?P<format>[a-z0-9]+)/?$/br>
+auth/ ^users/resend_activation\.(?P<format>[a-z0-9]+)/?$</br>
 auth/ ^users/reset_password/$</br>
 auth/ ^users/reset_password\.(?P<format>[a-z0-9]+)/?$</br>
 auth/ ^users/reset_password_confirm/$</br>
