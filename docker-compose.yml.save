@@ -10,7 +10,7 @@ services:
                 - static_volume:/app/staticfiles
                 - media_volume:/app/mediafiles
                 command: >
-                          bash -c "python manage.py collectstatic --noinput && File "/usr/local/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_processpython manage.py migrate && 
+                          bash -c "python manage.py collectstatic --noinput &&
                           gunicorn git_commands.wsgi:application --bind 0.0.0.0:8000"
         nginx:
                 build: ./nginx
