@@ -27,7 +27,7 @@ services:
                         - "80:80"
         sqlite3:
                 image: nouchka/sqlite3:latest
-                container_name: db_container
+                container_name: sqlite3
                 stdin_open: true
                 tty: true
                 volumes:

@@ -16,13 +16,12 @@ ALLOWED_HOSTS = os.getenv("HOSTS").split()
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
-    'http://85.192.41.43',
+    'http://85.192.41.43'
 ]
-
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3030',
-    'http://85.192.41.43',
+    'http://85.192.41.43'
 ]
 
 
@@ -33,9 +32,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'django.contrib.sites',
     'corsheaders',
+=======
+>>>>>>> d13b9c8c6e45f6a7bcf94fd84a8ab56f0a7bbdf8
     'rest_framework',
+    'corsheaders',
     'djoser',
     'app1.apps.App1Config'
 ]
@@ -166,6 +169,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
+<<<<<<< HEAD
 }
 
 # EMAIL CONFIG
@@ -180,3 +184,6 @@ EMAIL_HOST_PASSWORD = os.getenv("SMTP_PASSWORD")
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
+=======
+}
+>>>>>>> d13b9c8c6e45f6a7bcf94fd84a8ab56f0a7bbdf8

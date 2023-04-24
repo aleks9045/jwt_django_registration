@@ -1,8 +1,7 @@
 version: '3'
-
 services:
         web:
-                container_name: djando_container
+                container_name: web
                 build: .
                 ports:
                 - "8000:8000"
@@ -11,7 +10,7 @@ services:
                 - media_volume:/app/mediafiles
                 command: >
                           bash -c "python manage.py collectstatic --noinput &&
-                          gunicorn git_commands.wsgi:application --bind 0.0.0.0:8000"
+                          gunicorn --bind 0.0.0.0:8000 djangoProject.wsgi:application"
         nginx:
                 build: ./nginx
                 container_name: nginx
@@ -24,6 +23,13 @@ services:
                         - media_volume:/app/media
                 ports:
                         - "80:80"
+        sqlite3:
+                image: nouchka/sqlite3:latest
+                container_name: db_container
+                stdin_open: true
+                tty: true
+                volumes:
+                      - ./db:/root/db/
 volumes:
   media_volume:
   static_volume:
