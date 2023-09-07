@@ -1,7 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import (
-    AbstractUser
-)
+from django.contrib.auth.models import (AbstractUser)
 
 
 class CustomUser(AbstractUser):
@@ -12,16 +10,4 @@ class CustomUser(AbstractUser):
     REQUIRED_FIELDS = ["email"]
 
     def __str__(self):
-        return str(self.id)
-
-
-class Files(models.Model):
-    number = models.AutoField(primary_key=True)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True)
-    name = models.CharField('name', max_length=255)
-    weight = models.IntegerField('weight')
-    extension = models.CharField('extension', max_length=18)
-    upload_date = models.DateTimeField('date', auto_now=True)
-
-    def __str__(self):
-        return str(self.user)
+        return str(self.username)

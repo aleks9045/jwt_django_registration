@@ -97,7 +97,7 @@ USE_TZ = True
 
 AUTH_USER_MODEL = "app1.CustomUser"
 
-SITE_ID = 1
+SITE_ID = 4
 
 STATIC_URL = 'static/'
 
@@ -124,6 +124,8 @@ REST_FRAMEWORK = {
 # DJOSER CONFIG
 DJOSER = {
     "LOGIN_FIELD": "email",
+    "SEND_ACTIVATION_EMAIL": True,
+    "ACTIVATION_URL": "#/activate/{uid}/{token}",
     "SEND_CONFIRMATION_EMAIL": True,
     "SET_USERNAME_RETYPE": True,
     "SET_PASSWORD_RETYPE": True,
